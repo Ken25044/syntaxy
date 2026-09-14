@@ -3,6 +3,7 @@ import {
   getDocs,
   query,
   where,
+  documentId,
   type QueryConstraint,
 } from 'firebase/firestore';
 import { db } from '../lib/firebase';
@@ -36,4 +37,30 @@ export async function fetchQuestions(opts: FetchQuestionsOptions = {}): Promise<
     [all[i], all[j]] = [all[j], all[i]];
   }
   return all.slice(0, count);
+}
+
+/** 複数の問題IDから問題を取得 */
+export async function fetchQuestionsByIds(ids: string[]): Promise<Question[]> {
+  if (!ids || ids.length === 0) return [];
+
+  // Firestoreの'in'クエリは最大10件までなので、チャンクに分ける
+  const chunks = [];
+  for (let i = 0; i < ids.length; i += 10) {
+    chunks.push(ids.slice(i, i + 10));
+  }
+
+  const results: Question[] = [];
+  for (const chunk of chunks) {
+    const q = query(collection(db, QUESTIONS_COL), where(documentId(), 'in', chunk));
+    const snap = await getDocs(q);
+    snap.docs.forEach((d) => results.push({ id: d.id, ...d.data() } as Question));
+  }
+
+  // ランダムにシャッフル
+  for (let i = results.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [results[i], results[j]] = [results[j], results[i]];
+  }
+
+  return results;
 }

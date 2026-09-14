@@ -98,6 +98,38 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 苦手な問題の復習 */}
+      {user && (
+        <section>
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">苦手な問題</h2>
+          </div>
+          {profile?.weak_questions && profile.weak_questions.length > 0 ? (
+            <Link
+              to="/quiz?mode=review"
+              className="flex items-center gap-4 p-4 rounded-2xl bg-orange-50 border border-orange-100 hover:shadow-md transition-all active:scale-95"
+            >
+              <span className="text-3xl">🔥</span>
+              <div className="flex-1">
+                <p className="font-semibold text-gray-800">復習モード</p>
+                <p className="text-sm text-gray-500">{profile.weak_questions.length}問の苦手な問題があります</p>
+              </div>
+              <svg className="w-5 h-5 text-gray-300 ml-auto flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          ) : (
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-gray-50 border border-gray-100 opacity-60">
+              <span className="text-3xl">🎉</span>
+              <div>
+                <p className="font-semibold text-gray-600">復習モード</p>
+                <p className="text-sm text-gray-400">現在、苦手な問題はありません</p>
+              </div>
+            </div>
+          )}
+        </section>
+      )}
+
       {/* 文法カテゴリ */}
       <section>
         <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">文法カテゴリ</h2>

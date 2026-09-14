@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { fetchQuestions } from '../services/questionService';
+import { fetchQuestions, fetchQuestionsByIds } from '../services/questionService';
 import { saveStudyLog } from '../services/studyLogService';
-import { updateStreak } from '../services/userService';
+import { updateStreak, updateWeakQuestion } from '../services/userService';
 import type { Question, SvocRole } from '../types';
 
 
@@ -247,7 +247,7 @@ export default function QuizPage() {
   const navigate = useNavigate();
   const { user, profile } = useAuth();
 
-  const mode = (searchParams.get('mode') ?? 'simple') as 'simple' | 'personalized';
+  const mode = (searchParams.get('mode') ?? 'simple') as 'simple' | 'personalized' | 'review';
   const category = searchParams.get('category') ?? undefined;
 
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -260,17 +260,36 @@ export default function QuizPage() {
 
   useEffect(() => {
     setLoading(true);
-    fetchQuestions({ mode, category, count: 5 })
-      .then((qs) => {
+    
+    const loadQuestions = async () => {
+      try {
+        let qs: Question[] = [];
+        if (mode === 'review') {
+          if (!profile?.weak_questions || profile.weak_questions.length === 0) {
+            setError('苦手な問題がありません。');
+            return;
+          }
+          qs = await fetchQuestionsByIds(profile.weak_questions);
+          // 復習モードでは出題数を絞るか全て出すか（ここでは最大10問とする）
+          qs = qs.slice(0, 10);
+        } else {
+          qs = await fetchQuestions({ mode, category, count: 5 });
+        }
+
         if (qs.length === 0) {
           setError('問題が見つかりませんでした。');
           return;
         }
         setQuestions(qs);
-      })
-      .catch(() => setError('問題の取得に失敗しました。'))
-      .finally(() => setLoading(false));
-  }, [mode, category]);
+      } catch (e) {
+        setError('問題の取得に失敗しました。');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadQuestions();
+  }, [mode, category, profile?.weak_questions]);
 
   const handleAnswer = useCallback(
     async (_answer: string | string[], isCorrect: boolean) => {
@@ -289,8 +308,21 @@ export default function QuizPage() {
           if (isCorrect && profile) {
             await updateStreak(user.uid, profile.streak_days, profile.last_study_date);
           }
+          // 苦手の更新
+          await updateWeakQuestion(user.uid, q.id, isCorrect);
+
+          // ローカルのprofileのweak_questionsも即座に更新しておく（UX向上のため）
+          if (profile) {
+            if (isCorrect) {
+              profile.weak_questions = (profile.weak_questions || []).filter(id => id !== q.id);
+            } else {
+              if (!(profile.weak_questions || []).includes(q.id)) {
+                profile.weak_questions = [...(profile.weak_questions || []), q.id];
+              }
+            }
+          }
         } catch (e) {
-          console.error('Failed to save log:', e);
+          console.error('Failed to save log or update weak question:', e);
         }
       }
     },
@@ -359,7 +391,7 @@ export default function QuizPage() {
       </div>
 
       {/* 問題コンポーネント */}
-      {mode === 'simple' ? (
+      {q.mode === 'simple' ? (
         <SimpleQuiz key={quizKey} question={q} onAnswer={(_ans, ok) => handleAnswer(_ans, ok)} />
       ) : (
         <SortQuiz key={quizKey} question={q} onAnswer={(arr, ok) => handleAnswer(arr, ok)} />

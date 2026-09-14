@@ -30,6 +30,7 @@ export interface UserProfile {
   interests: string[];
   streak_days: number;
   last_study_date: Timestamp | null;
+  weak_questions?: string[];
 }
 
 // 学習ログ（Firestore: study_logs コレクション）

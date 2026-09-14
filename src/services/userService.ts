@@ -5,6 +5,8 @@ import {
   updateDoc,
   serverTimestamp,
   Timestamp,
+  arrayUnion,
+  arrayRemove,
 } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import type { UserProfile } from '../types';
@@ -78,4 +80,25 @@ export async function updateStreak(uid: string, currentStreak: number, lastStudy
   });
 
   return newStreak;
+}
+
+/**
+ * 苦手な問題を追加・削除する
+ * @param uid ユーザーID
+ * @param questionId 問題ID
+ * @param isCorrect 正解したかどうか（trueなら削除、falseなら追加）
+ */
+export async function updateWeakQuestion(uid: string, questionId: string, isCorrect: boolean): Promise<void> {
+  const ref = doc(db, USERS_COL, uid);
+  if (isCorrect) {
+    await updateDoc(ref, {
+      weak_questions: arrayRemove(questionId),
+      updated_at: serverTimestamp(),
+    });
+  } else {
+    await updateDoc(ref, {
+      weak_questions: arrayUnion(questionId),
+      updated_at: serverTimestamp(),
+    });
+  }
 }
