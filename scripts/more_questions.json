@@ -1,0 +1,431 @@
+[
+  {
+    "mode": "simple",
+    "difficulty": 2,
+    "theme": "趣味",
+    "grammar_category": "現在時制",
+    "japanese_text": "彼は毎日ピアノを弾きます。",
+    "english_text": "He plays the piano every day.",
+    "explanation": "三人称単数の現在の習慣には動詞にsがつきます。",
+    "parts": [
+      { "text": "He", "role": "S" },
+      { "text": "plays", "role": "V" },
+      { "text": "the piano", "role": "O" },
+      { "text": "every day", "role": "M" }
+    ],
+    "options": ["plays", "play", "played", "is playing"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 2,
+    "theme": "日常",
+    "grammar_category": "現在時制",
+    "japanese_text": "私たちは夕食後にテレビを見ます。",
+    "english_text": "We watch TV after dinner.",
+    "explanation": "現在の習慣を表すので現在形を使います。",
+    "parts": [
+      { "text": "We", "role": "S" },
+      { "text": "watch", "role": "V" },
+      { "text": "TV", "role": "O" },
+      { "text": "after dinner", "role": "M" }
+    ],
+    "options": ["We", "watch", "TV", "after dinner"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 3,
+    "theme": "旅行",
+    "grammar_category": "過去時制",
+    "japanese_text": "彼女は去年の夏、パリを訪れました。",
+    "english_text": "She visited Paris last summer.",
+    "explanation": "過去の出来事なので過去形 visited を使います。",
+    "parts": [
+      { "text": "She", "role": "S" },
+      { "text": "visited", "role": "V" },
+      { "text": "Paris", "role": "O" },
+      { "text": "last summer", "role": "M" }
+    ],
+    "options": ["visited", "visit", "visits", "has visited"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 3,
+    "theme": "買い物",
+    "grammar_category": "過去時制",
+    "japanese_text": "私は新しい靴を買いました。",
+    "english_text": "I bought new shoes.",
+    "explanation": "不規則動詞 buy の過去形 bought を使います。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "bought", "role": "V" },
+      { "text": "new shoes", "role": "O" }
+    ],
+    "options": ["I", "bought", "new shoes"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 4,
+    "theme": "仕事",
+    "grammar_category": "現在完了",
+    "japanese_text": "私はここで10年間働いています。",
+    "english_text": "I have worked here for ten years.",
+    "explanation": "過去から現在までの継続を表すため、現在完了形を使います。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "have worked", "role": "V" },
+      { "text": "here", "role": "M" },
+      { "text": "for ten years", "role": "M" }
+    ],
+    "options": ["have worked", "worked", "work", "am working"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 4,
+    "theme": "生活",
+    "grammar_category": "現在完了",
+    "japanese_text": "彼は財布をなくしてしまいました。",
+    "english_text": "He has lost his wallet.",
+    "explanation": "「なくしてしまって今もない」という結果を表す現在完了形です。",
+    "parts": [
+      { "text": "He", "role": "S" },
+      { "text": "has lost", "role": "V" },
+      { "text": "his wallet", "role": "O" }
+    ],
+    "options": ["He", "has lost", "his wallet"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 4,
+    "theme": "歴史",
+    "grammar_category": "受動態",
+    "japanese_text": "この写真は1990年に撮られました。",
+    "english_text": "This photo was taken in 1990.",
+    "explanation": "過去の受動態は be動詞の過去形 + 過去分詞 になります。",
+    "parts": [
+      { "text": "This photo", "role": "S" },
+      { "text": "was taken", "role": "V" },
+      { "text": "in 1990", "role": "M" }
+    ],
+    "options": ["was taken", "is taken", "took", "takes"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 4,
+    "theme": "日常",
+    "grammar_category": "受動態",
+    "japanese_text": "その窓は彼によって壊されました。",
+    "english_text": "The window was broken by him.",
+    "explanation": "「〜によって」は by を使って表します。",
+    "parts": [
+      { "text": "The window", "role": "S" },
+      { "text": "was broken", "role": "V" },
+      { "text": "by him", "role": "M" }
+    ],
+    "options": ["The window", "was broken", "by him"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 3,
+    "theme": "買い物",
+    "grammar_category": "不定詞",
+    "japanese_text": "私は服を買うために店に行きました。",
+    "english_text": "I went to the store to buy clothes.",
+    "explanation": "目的を表す不定詞（〜するために）の副詞的用法です。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "went", "role": "V" },
+      { "text": "to the store", "role": "M" },
+      { "text": "to buy clothes", "role": "M" }
+    ],
+    "options": ["to buy", "buying", "bought", "buy"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 3,
+    "theme": "日常",
+    "grammar_category": "不定詞",
+    "japanese_text": "私はあなたに会えて嬉しいです。",
+    "english_text": "I am glad to see you.",
+    "explanation": "感情の原因を表す不定詞（〜して）の副詞的用法です。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "am", "role": "V" },
+      { "text": "glad", "role": "C" },
+      { "text": "to see you", "role": "M" }
+    ],
+    "options": ["I", "am", "glad", "to see you"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "日常",
+    "grammar_category": "関係代名詞",
+    "japanese_text": "これは私が探していた鍵です。",
+    "english_text": "This is the key that I was looking for.",
+    "explanation": "the key を修飾する目的格の関係代名詞 that を使います。",
+    "parts": [
+      { "text": "This", "role": "S" },
+      { "text": "is", "role": "V" },
+      { "text": "the key that I was looking for", "role": "C" }
+    ],
+    "options": ["that", "who", "whose", "what"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "人物",
+    "grammar_category": "関係代名詞",
+    "japanese_text": "私には東京に住んでいる友達がいます。",
+    "english_text": "I have a friend who lives in Tokyo.",
+    "explanation": "人を修飾する主格の関係代名詞 who を使います。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "have", "role": "V" },
+      { "text": "a friend who lives in Tokyo", "role": "O" }
+    ],
+    "options": ["I", "have", "a friend", "who lives in Tokyo"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 3,
+    "theme": "アドバイス",
+    "grammar_category": "助動詞",
+    "japanese_text": "あなたは病院に行くべきです。",
+    "english_text": "You should go to a hospital.",
+    "explanation": "「〜するべきだ」という義務や助言は should を使います。",
+    "parts": [
+      { "text": "You", "role": "S" },
+      { "text": "should go", "role": "V" },
+      { "text": "to a hospital", "role": "M" }
+    ],
+    "options": ["should go", "must going", "can go", "will go"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 3,
+    "theme": "能力",
+    "grammar_category": "助動詞",
+    "japanese_text": "彼女はピアノを弾くことができます。",
+    "english_text": "She can play the piano.",
+    "explanation": "「〜できる」という能力は can を使います。",
+    "parts": [
+      { "text": "She", "role": "S" },
+      { "text": "can play", "role": "V" },
+      { "text": "the piano", "role": "O" }
+    ],
+    "options": ["She", "can play", "the piano"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "願望",
+    "grammar_category": "仮定法",
+    "japanese_text": "私がもっとお金持ちだったらなぁ。",
+    "english_text": "I wish I were richer.",
+    "explanation": "「〜であればいいのに」という現在の事実に反する願望は I wish + 仮定法過去 を使います。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "wish", "role": "V" },
+      { "text": "I were richer", "role": "O" }
+    ],
+    "options": ["were", "was", "am", "have been"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "仮定",
+    "grammar_category": "仮定法",
+    "japanese_text": "もし明日晴れたら、私たちはピクニックに行きます。",
+    "english_text": "If it is sunny tomorrow, we will go on a picnic.",
+    "explanation": "未来のあり得る条件は、仮定法ではなく直接法を使います（時や条件を表す副詞節では未来のことでも現在形）。",
+    "parts": [
+      { "text": "If it is sunny tomorrow", "role": "M" },
+      { "text": "we", "role": "S" },
+      { "text": "will go", "role": "V" },
+      { "text": "on a picnic", "role": "M" }
+    ],
+    "options": ["If it is sunny tomorrow", "we", "will go", "on a picnic"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 4,
+    "theme": "趣味",
+    "grammar_category": "動名詞",
+    "japanese_text": "彼は英語を話すのが得意です。",
+    "english_text": "He is good at speaking English.",
+    "explanation": "前置詞（at）の後には名詞が来るため、動詞を入れる場合は動名詞（-ing）にします。",
+    "parts": [
+      { "text": "He", "role": "S" },
+      { "text": "is", "role": "V" },
+      { "text": "good", "role": "C" },
+      { "text": "at speaking English", "role": "M" }
+    ],
+    "options": ["speaking", "to speak", "speak", "spoke"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 4,
+    "theme": "日常",
+    "grammar_category": "動名詞",
+    "japanese_text": "彼女はテレビを見るのをやめました。",
+    "english_text": "She stopped watching TV.",
+    "explanation": "stop の目的語として「〜すること」を表す場合は動名詞を使います。",
+    "parts": [
+      { "text": "She", "role": "S" },
+      { "text": "stopped", "role": "V" },
+      { "text": "watching TV", "role": "O" }
+    ],
+    "options": ["She", "stopped", "watching TV"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "物",
+    "grammar_category": "分詞",
+    "japanese_text": "日本で作られた車は人気があります。",
+    "english_text": "Cars made in Japan are popular.",
+    "explanation": "名詞を後ろから修飾する過去分詞（〜された）を使います。",
+    "parts": [
+      { "text": "Cars made in Japan", "role": "S" },
+      { "text": "are", "role": "V" },
+      { "text": "popular", "role": "C" }
+    ],
+    "options": ["made", "making", "make", "to make"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "感情",
+    "grammar_category": "分詞",
+    "japanese_text": "その映画はとても退屈でした。",
+    "english_text": "The movie was very boring.",
+    "explanation": "物事が「退屈させる」という意味なので、現在分詞 boring を使います。",
+    "parts": [
+      { "text": "The movie", "role": "S" },
+      { "text": "was", "role": "V" },
+      { "text": "very boring", "role": "C" }
+    ],
+    "options": ["The movie", "was", "very boring"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 4,
+    "theme": "比較",
+    "grammar_category": "比較",
+    "japanese_text": "私は彼と同じくらい忙しいです。",
+    "english_text": "I am as busy as he is.",
+    "explanation": "「〜と同じくらい」という同等比較は as + 原級 + as を使います。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "am", "role": "V" },
+      { "text": "as busy as he is", "role": "C" }
+    ],
+    "options": ["as busy as", "busier than", "the busiest", "more busy than"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 4,
+    "theme": "比較",
+    "grammar_category": "比較",
+    "japanese_text": "この本はあの本よりも面白いです。",
+    "english_text": "This book is more interesting than that one.",
+    "explanation": "長い形容詞の比較級は more をつけます。",
+    "parts": [
+      { "text": "This book", "role": "S" },
+      { "text": "is", "role": "V" },
+      { "text": "more interesting than that one", "role": "C" }
+    ],
+    "options": ["This book", "is", "more interesting", "than that one"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 2,
+    "theme": "所有",
+    "grammar_category": "代名詞",
+    "japanese_text": "これらの本は私たちのものです。",
+    "english_text": "These books are ours.",
+    "explanation": "「私たちのもの」は所有代名詞 ours を使います。",
+    "parts": [
+      { "text": "These books", "role": "S" },
+      { "text": "are", "role": "V" },
+      { "text": "ours", "role": "C" }
+    ],
+    "options": ["ours", "us", "our", "we"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 2,
+    "theme": "日常",
+    "grammar_category": "代名詞",
+    "japanese_text": "彼にその手紙を渡してください。",
+    "english_text": "Please give him the letter.",
+    "explanation": "動詞の目的語になるので目的格の him を使います。",
+    "parts": [
+      { "text": "Please give", "role": "V" },
+      { "text": "him", "role": "O" },
+      { "text": "the letter", "role": "O" }
+    ],
+    "options": ["Please give", "him", "the letter"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 3,
+    "theme": "時間",
+    "grammar_category": "前置詞",
+    "japanese_text": "私は7時に起きます。",
+    "english_text": "I get up at seven o'clock.",
+    "explanation": "時刻の前には前置詞 at を使います。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "get up", "role": "V" },
+      { "text": "at seven o'clock", "role": "M" }
+    ],
+    "options": ["at", "in", "on", "to"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 3,
+    "theme": "場所",
+    "grammar_category": "前置詞",
+    "japanese_text": "箱の中にりんごがあります。",
+    "english_text": "There is an apple in the box.",
+    "explanation": "「〜の中に」は前置詞 in を使います。",
+    "parts": [
+      { "text": "There is", "role": "V" },
+      { "text": "an apple", "role": "S" },
+      { "text": "in the box", "role": "M" }
+    ],
+    "options": ["There is", "an apple", "in the box"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 4,
+    "theme": "理由",
+    "grammar_category": "接続詞",
+    "japanese_text": "もし時間があれば、私はあなたを手伝います。",
+    "english_text": "If I have time, I will help you.",
+    "explanation": "「もし〜ならば」という条件を表す接続詞 If を使います。",
+    "parts": [
+      { "text": "If I have time", "role": "M" },
+      { "text": "I", "role": "S" },
+      { "text": "will help", "role": "V" },
+      { "text": "you", "role": "O" }
+    ],
+    "options": ["If", "When", "Because", "Though"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 4,
+    "theme": "時間",
+    "grammar_category": "接続詞",
+    "japanese_text": "私が彼に会ったとき、彼は笑っていました。",
+    "english_text": "When I saw him, he was smiling.",
+    "explanation": "「〜するとき」という時を表す接続詞 When を使います。",
+    "parts": [
+      { "text": "When I saw him", "role": "M" },
+      { "text": "he", "role": "S" },
+      { "text": "was smiling", "role": "V" }
+    ],
+    "options": ["When I saw him", "he", "was smiling"]
+  }
+]
