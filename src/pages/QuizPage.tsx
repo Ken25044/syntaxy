@@ -284,8 +284,8 @@ export default function QuizPage() {
             return;
           }
           qs = await fetchQuestionsByIds(profile.weak_questions);
-          // 復習モードでは出題数を絞るか全て出すか（ここでは最大10問とする）
-          qs = qs.slice(0, 10);
+          // 復習モードでは出題数を絞るか全て出すか（ここでは最大5問とする）
+          qs = qs.slice(0, 5);
         } else {
           qs = await fetchQuestions({ mode, category, count: 5 });
         }
