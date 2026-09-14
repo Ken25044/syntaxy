@@ -1,12 +1,10 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 
 export default function Header() {
   const { user } = useAuth();
-  const location = useLocation();
 
-  // クイズ中はヘッダーを非表示
-  if (location.pathname.startsWith('/quiz')) return null;
+  // 常にヘッダーを表示し、ロゴからホームに戻れるようにする
 
   return (
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">

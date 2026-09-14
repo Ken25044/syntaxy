@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { updateUserProfile } from '../services/userService';
 
@@ -47,8 +48,13 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white px-5 py-12 flex flex-col max-w-md mx-auto">
-      <div className="flex-1 space-y-8">
+    <div className="relative min-h-screen bg-white px-5 py-12 flex flex-col max-w-md mx-auto">
+      {/* どこからでもホームに戻れるロゴ（左上） */}
+      <Link to="/" className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2">
+        <span className="text-xl font-bold text-primary-600 tracking-tight">Syntaxy</span>
+      </Link>
+
+      <div className="flex-1 space-y-8 mt-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-800 mb-2">Syntaxyへようこそ！</h1>
           <p className="text-gray-500 text-sm">あなたに合った学習を提供するために、少しだけ教えてください。</p>

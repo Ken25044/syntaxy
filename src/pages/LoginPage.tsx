@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { auth } from '../lib/firebase';
 
 export default function LoginPage() {
@@ -24,9 +24,13 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-[80vh] flex flex-col items-center justify-center space-y-8 px-4">
+    <div className="relative min-h-[80vh] flex flex-col items-center justify-center space-y-8 px-4">
+      {/* どこからでもホームに戻れるロゴ（左上） */}
+      <Link to="/" className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2">
+        <span className="text-xl font-bold text-primary-600 tracking-tight">Syntaxy</span>
+      </Link>
       {/* ロゴ */}
-      <div className="text-center">
+      <div className="text-center mt-12">
         <h1 className="text-4xl font-bold text-primary-600 mb-2">Syntaxy</h1>
         <p className="text-gray-500 text-sm">英語文法をゲーム感覚でマスターしよう</p>
       </div>
