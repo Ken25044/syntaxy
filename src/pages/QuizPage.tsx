@@ -76,6 +76,17 @@ function SimpleQuiz({
 }
 
 // ── 並べ替えモード ────────────────────────────────────
+function formatDisplayWord(word: string, isFirst: boolean) {
+  if (!word) return word;
+  if (isFirst) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }
+  if (word === 'I' || word.startsWith('I ') || word.startsWith("I'")) {
+    return word;
+  }
+  return word.charAt(0).toLowerCase() + word.slice(1);
+}
+
 function SortQuiz({
   question,
   onAnswer,
@@ -143,7 +154,7 @@ function SortQuiz({
                 disabled={submitted}
                 className={`px-3 py-1.5 rounded-xl border-2 text-sm font-medium transition-all ${colors.bg} ${colors.text} ${colors.border}`}
               >
-                {word}
+                {formatDisplayWord(word, idx === 0)}
                 <span className="ml-1 text-xs opacity-60">{colors.label}</span>
               </button>
             );
@@ -162,7 +173,7 @@ function SortQuiz({
               disabled={submitted}
               className="px-3 py-1.5 rounded-xl border-2 border-gray-200 bg-white text-sm font-medium text-gray-700 hover:border-primary-300 hover:bg-primary-50 transition-all"
             >
-              {word}
+              {formatDisplayWord(word, false)}
             </button>
           ))}
         </div>
@@ -189,7 +200,7 @@ function SortQuiz({
               return (
                 <div key={i} className="flex flex-col items-center">
                   <span className={`px-3 py-1.5 rounded-xl border-2 text-sm font-medium ${colors.bg} ${colors.text} ${colors.border}`}>
-                    {part.text}
+                    {formatDisplayWord(part.text, i === 0)}
                   </span>
                   <span className={`text-xs font-bold mt-1 ${colors.text}`}>{colors.label}</span>
                 </div>
