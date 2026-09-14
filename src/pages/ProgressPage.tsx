@@ -18,7 +18,7 @@ function BarChart({ data }: { data: { date: string; correct: number; total: numb
             />
             {/* 正解バー */}
             <div
-              className="w-full bg-primary-400 rounded-t-md absolute bottom-0 transition-all"
+              className="w-full bg-primary-500 rounded-t-md absolute bottom-0 transition-all"
               style={{ height: `${(d.correct / maxTotal) * 80}px` }}
             />
           </div>
@@ -78,7 +78,7 @@ export default function ProgressPage() {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-sm font-semibold text-gray-600">過去7日間の学習</h2>
           <div className="flex items-center gap-3 text-xs text-gray-400">
-            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-sm bg-primary-400 inline-block" />正解</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-sm bg-primary-500 inline-block" />正解</span>
             <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-sm bg-gray-100 inline-block" />回答数</span>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function ProgressPage() {
                 <span className="text-sm text-gray-600 w-24 flex-shrink-0 truncate">{cat}</span>
                 <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-primary-400 rounded-full transition-all duration-500"
+                    className="h-full bg-primary-500 rounded-full transition-all duration-500"
                     style={{ width: `${rate}%` }}
                   />
                 </div>
