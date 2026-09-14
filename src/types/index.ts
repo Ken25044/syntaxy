@@ -17,6 +17,7 @@ export interface Question {
   theme: string;
   japanese_text: string;
   english_text: string;
+  explanation?: string; // 解説文
   parts: QuestionPart[];
   options: string[]; // 4択選択肢（シンプルモード用）
   grammar_category: string;

@@ -30,6 +30,7 @@ const questions = [
     grammar_category: '現在時制',
     japanese_text: '私は毎朝コーヒーを飲みます。',
     english_text: 'I drink coffee every morning.',
+    explanation: '毎日の習慣を表す時は「現在形」を使います。主語がIなので、動詞は原形のdrinkになります。',
     parts: [
       { text: 'I', role: 'S' },
       { text: 'drink', role: 'V' },
@@ -45,6 +46,7 @@ const questions = [
     grammar_category: '現在時制',
     japanese_text: '彼女は英語を上手に話します。',
     english_text: 'She speaks English well.',
+    explanation: '主語が三人称単数（She）で現在の習慣・状態を表すため、動詞の最後にsをつけてspeaksになります。',
     parts: [
       { text: 'She', role: 'S' },
       { text: 'speaks', role: 'V' },
@@ -62,6 +64,7 @@ const questions = [
     grammar_category: '過去時制',
     japanese_text: '私は昨日図書館へ行きました。',
     english_text: 'I went to the library yesterday.',
+    explanation: '「昨日 (yesterday)」という過去の出来事なので、goの過去形であるwentを使います。',
     parts: [
       { text: 'I', role: 'S' },
       { text: 'went', role: 'V' },
@@ -77,6 +80,7 @@ const questions = [
     grammar_category: '過去時制',
     japanese_text: '彼らはパーティーでピザを食べました。',
     english_text: 'They ate pizza at the party.',
+    explanation: '過去の出来事なのでeatの過去形ateを使います。場所を表すat the partyはM（修飾語）になります。',
     parts: [
       { text: 'They', role: 'S' },
       { text: 'ate', role: 'V' },
@@ -94,6 +98,7 @@ const questions = [
     grammar_category: '現在完了',
     japanese_text: '私は一度も富士山に登ったことがありません。',
     english_text: 'I have never climbed Mt. Fuji.',
+    explanation: '「（今まで）～したことがない」という経験を表すため、現在完了形（have + 過去分詞）とneverを組み合わせます。',
     parts: [
       { text: 'I', role: 'S' },
       { text: 'have never climbed', role: 'V' },
@@ -108,6 +113,7 @@ const questions = [
     grammar_category: '現在完了',
     japanese_text: '彼はすでに宿題を終えました。',
     english_text: 'He has already finished his homework.',
+    explanation: '「（ちょうど）〜してしまった」という完了を表す現在完了形（has + 過去分詞）に、すでにを意味するalreadyを合わせます。',
     parts: [
       { text: 'He', role: 'S' },
       { text: 'has already finished', role: 'V' },
@@ -124,6 +130,7 @@ const questions = [
     grammar_category: '受動態',
     japanese_text: 'この本は多くの国々で読まれています。',
     english_text: 'This book is read in many countries.',
+    explanation: '「〜されている」という受け身の意味なので、受動態（be動詞 + 過去分詞）を使います。',
     parts: [
       { text: 'This book', role: 'S' },
       { text: 'is read', role: 'V' },
@@ -140,6 +147,7 @@ const questions = [
     grammar_category: '不定詞',
     japanese_text: '私は医者になりたいです。',
     english_text: 'I want to be a doctor.',
+    explanation: '「〜したい」は want to 〜（不定詞の名詞的用法）で表現します。',
     parts: [
       { text: 'I', role: 'S' },
       { text: 'want', role: 'V' },
@@ -154,6 +162,7 @@ const questions = [
     grammar_category: '不定詞',
     japanese_text: '彼女は新しい言語を学ぶために一生懸命勉強します。',
     english_text: 'She studies hard to learn a new language.',
+    explanation: '「〜するために」という目的を表すには、to + 動詞の原形（不定詞の副詞的用法）を使います。',
     parts: [
       { text: 'She', role: 'S' },
       { text: 'studies', role: 'V' },
@@ -171,6 +180,7 @@ const questions = [
     grammar_category: '関係代名詞',
     japanese_text: 'あの赤いドレスを着ている女性は私の先生です。',
     english_text: 'The woman who is wearing a red dress is my teacher.',
+    explanation: '人を修飾する関係代名詞で、主格として働くため who を使います。',
     parts: [
       { text: 'The woman who is wearing a red dress', role: 'S' },
       { text: 'is', role: 'V' },
@@ -185,6 +195,7 @@ const questions = [
     grammar_category: '関係代名詞',
     japanese_text: '私が買った本はとても面白いです。',
     english_text: 'The book that I bought is very interesting.',
+    explanation: 'The bookを修飾する関係代名詞の節（that I bought）が主語の直後に来ます。',
     parts: [
       { text: 'The book that I bought', role: 'S' },
       { text: 'is', role: 'V' },

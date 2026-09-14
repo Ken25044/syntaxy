@@ -7,14 +7,16 @@ import QuizResultPage from './pages/QuizResultPage';
 import ProgressPage from './pages/ProgressPage';
 import SettingsPage from './pages/SettingsPage';
 import LoginPage from './pages/LoginPage';
+import OnboardingPage from './pages/OnboardingPage';
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          {/* ログインページ（レイアウトなし） */}
+          {/* ログイン・オンボーディングページ（レイアウトなし） */}
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/onboarding" element={<OnboardingPage />} />
 
           {/* メインレイアウト */}
           <Route element={<AppLayout />}>

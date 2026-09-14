@@ -207,19 +207,27 @@ function ResultOverlay({
   isCorrect,
   onNext,
   isLast,
+  explanation,
 }: {
   isCorrect: boolean;
   onNext: () => void;
   isLast: boolean;
+  explanation?: string;
 }) {
   return (
     <div className={`fixed inset-x-0 bottom-0 z-50 p-4 pb-8 rounded-t-3xl shadow-2xl transition-all ${isCorrect ? 'bg-emerald-500' : 'bg-red-400'}`}>
       <div className="max-w-lg mx-auto flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="text-3xl">{isCorrect ? '🎉' : '😅'}</span>
+          <span className="text-3xl self-start mt-1">{isCorrect ? '🎉' : '😅'}</span>
           <div>
             <p className="text-white font-bold text-lg">{isCorrect ? '正解！' : '不正解...'}</p>
-            <p className="text-white/80 text-sm">{isCorrect ? 'すばらしい！' : 'もう一度チャレンジしよう'}</p>
+            <p className="text-white/90 text-sm">{isCorrect ? 'すばらしい！' : 'もう一度チャレンジしよう'}</p>
+            {!isCorrect && explanation && (
+              <div className="mt-2 bg-white/20 rounded-xl p-3 text-sm text-white border border-white/30">
+                <p className="font-semibold mb-1">💡 解説</p>
+                <p>{explanation}</p>
+              </div>
+            )}
           </div>
         </div>
         <button
@@ -359,7 +367,12 @@ export default function QuizPage() {
 
       {/* 結果オーバーレイ */}
       {lastResult && (
-        <ResultOverlay isCorrect={lastResult.isCorrect} onNext={handleNext} isLast={isLast} />
+        <ResultOverlay 
+          isCorrect={lastResult.isCorrect} 
+          onNext={handleNext} 
+          isLast={isLast} 
+          explanation={q.explanation}
+        />
       )}
     </div>
   );
