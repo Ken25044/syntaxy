@@ -1371,6 +1371,340 @@ const questions = [
     options: ['We', 'stayed', 'home', 'because it was raining']
   }
 
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '学術',
+    grammar_category: '仮定法',
+    japanese_text: '万が一彼女が心変わりしたら、私に知らせてください。',
+    english_text: 'Should she change her mind, please let me know.',
+    explanation: 'If she should change her mind のIfが省略され、倒置が起きた形（Should she change...）です。',
+    parts: [
+      { text: 'Should she change', role: 'M' },
+      { text: 'her mind', role: 'O' },
+      { text: 'please let me know', role: 'V' },
+    ],
+    options: ['Should she change', 'If she changed', 'Had she changed', 'Did she change']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: 'ビジネス',
+    grammar_category: '仮定法',
+    japanese_text: 'あなたの援助がなかったら、そのプロジェクトは失敗していただろう。',
+    english_text: 'Had it not been for your help, the project would have failed.',
+    explanation: 'If it had not been for... の If が省略され、倒置が起きた形です。',
+    parts: [
+      { text: 'Had it not been', role: 'M' },
+      { text: 'for your help', role: 'M' },
+      { text: 'the project', role: 'S' },
+      { text: 'would have failed', role: 'V' },
+    ],
+    options: ['Had it not been', 'for your help', 'the project', 'would have failed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '科学',
+    grammar_category: '分詞',
+    japanese_text: '他の条件がすべて同じであれば、この手法が最も効率的だ。',
+    english_text: 'All other things being equal, this method is the most efficient.',
+    explanation: '独立分詞構文です。主節の主語(this method)と異なる主語(All other things)が残っています。',
+    parts: [
+      { text: 'All other things being equal', role: 'M' },
+      { text: 'this method', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'the most efficient', role: 'C' },
+    ],
+    options: ['being', 'are', 'were', 'to be']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '文学',
+    grammar_category: '分詞',
+    japanese_text: '遠くから見ると、その岩は人間の顔のように見えた。',
+    english_text: 'Seen from a distance, the rock looked like a human face.',
+    explanation: 'If it is seen... の分詞構文。受動の意味なので過去分詞 Seen から始まります。',
+    parts: [
+      { text: 'Seen', role: 'M' },
+      { text: 'from a distance', role: 'M' },
+      { text: 'the rock', role: 'S' },
+      { text: 'looked like a human face', role: 'V' },
+    ],
+    options: ['Seen', 'from a distance', 'the rock', 'looked like a human face']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '関係代名詞',
+    japanese_text: '彼がその試験に合格したこと、それは私を驚かせた。',
+    english_text: 'He passed the exam, which surprised me.',
+    explanation: 'コンマ + which は継続用法で、前文の内容全体を先行詞として受けることができます。',
+    parts: [
+      { text: 'He passed the exam', role: 'M' },
+      { text: 'which', role: 'S' },
+      { text: 'surprised', role: 'V' },
+      { text: 'me', role: 'O' },
+    ],
+    options: ['which', 'what', 'that', 'it']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '学術',
+    grammar_category: '関係代名詞',
+    japanese_text: 'これが、その効果について私たちが議論していた薬です。',
+    english_text: 'This is the medicine about the effects of which we were discussing.',
+    explanation: 'the effects of the medicine が about the effects of which となります。',
+    parts: [
+      { text: 'This is the medicine', role: 'C' },
+      { text: 'about the effects of which', role: 'M' },
+      { text: 'we', role: 'S' },
+      { text: 'were discussing', role: 'V' },
+    ],
+    options: ['This is the medicine', 'about the effects of which', 'we', 'were discussing']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '論理',
+    grammar_category: '助動詞',
+    japanese_text: '彼女がそんな間違いをしたはずがない。',
+    english_text: 'She cannot have made such a mistake.',
+    explanation: '「〜したはずがない」は cannot have + 過去分詞 で表します。',
+    parts: [
+      { text: 'She', role: 'S' },
+      { text: 'cannot have made', role: 'V' },
+      { text: 'such a mistake', role: 'O' },
+    ],
+    options: ['cannot have made', 'must not make', 'may not have made', 'should not make']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: 'ビジネス',
+    grammar_category: '助動詞',
+    japanese_text: 'あなたは上司にその問題を報告すべきだったのに（しなかった）。',
+    english_text: 'You should have reported the issue to your boss.',
+    explanation: '「〜すべきだったのに（しなかった）」は should have + 過去分詞 で表します。',
+    parts: [
+      { text: 'You', role: 'S' },
+      { text: 'should have reported', role: 'V' },
+      { text: 'the issue', role: 'O' },
+      { text: 'to your boss', role: 'M' },
+    ],
+    options: ['You', 'should have reported', 'the issue', 'to your boss']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '学術',
+    grammar_category: '動名詞',
+    japanese_text: '教授は、学生たちが論文を遅れて提出することに反対した。',
+    english_text: 'The professor objected to the students\' submitting their papers late.',
+    explanation: 'object to -ing で「〜することに反対する」。動名詞の意味上の主語は所有格（the students\'）または目的格を使います。',
+    parts: [
+      { text: 'The professor', role: 'S' },
+      { text: 'objected to', role: 'V' },
+      { text: 'the students\' submitting', role: 'O' },
+      { text: 'their papers late', role: 'M' },
+    ],
+    options: ['submitting', 'submit', 'submitted', 'to submit']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '動名詞',
+    japanese_text: '覆水盆に返らず。（こぼれたミルクを嘆いても無駄だ）',
+    english_text: 'It is no use crying over spilt milk.',
+    explanation: 'It is no use -ing で「〜しても無駄だ」という慣用表現です。',
+    parts: [
+      { text: 'It is no use', role: 'V' },
+      { text: 'crying', role: 'S' },
+      { text: 'over spilt milk', role: 'M' },
+    ],
+    options: ['It is no use', 'crying', 'over spilt milk']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '学術',
+    grammar_category: '比較',
+    japanese_text: 'その結果は、予想していたよりもはるかに重要であった。',
+    english_text: 'The result was much more significant than had been expected.',
+    explanation: 'thanの後に主語がなく、いきなり動詞が来ている一種の疑似関係代名詞的な用法です。また much で比較級を強調しています。',
+    parts: [
+      { text: 'The result', role: 'S' },
+      { text: 'was', role: 'V' },
+      { text: 'much more significant', role: 'C' },
+      { text: 'than had been expected', role: 'M' },
+    ],
+    options: ['much', 'very', 'many', 'so']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '比較',
+    japanese_text: '私たちが直面している問題は、過去のどの問題よりも複雑だ。',
+    english_text: 'The problem we are facing is more complex than any other problem in the past.',
+    explanation: '比較級 + than any other + 単数名詞 で最上級の意味を表します。',
+    parts: [
+      { text: 'The problem we are facing', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'more complex', role: 'C' },
+      { text: 'than any other problem in the past', role: 'M' },
+    ],
+    options: ['The problem we are facing', 'is', 'more complex', 'than any other problem in the past']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '学術',
+    grammar_category: '不定詞',
+    japanese_text: 'その理論が実証されるのは不可能だと思われる。',
+    english_text: 'The theory seems impossible to be proven.',
+    explanation: '難易形容詞（impossible）＋ 不定詞。主語（the theory）が不定詞の目的語になる場合は受動態（to be proven）にするか、能動態（to prove）にすることも可能です。ここでは受動態が選択肢になります。',
+    parts: [
+      { text: 'The theory', role: 'S' },
+      { text: 'seems impossible', role: 'C' },
+      { text: 'to be proven', role: 'M' },
+    ],
+    options: ['to be proven', 'proving', 'proved', 'having proven']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: 'ビジネス',
+    grammar_category: '不定詞',
+    japanese_text: 'その問題に対処する唯一の解決策は、戦略を完全に変更することだ。',
+    english_text: 'The only solution to cope with the problem is to completely change our strategy.',
+    explanation: '不定詞の副詞的用法による修飾（to cope with）と、名詞的用法の補語（to completely change）の両方を含みます。toと動詞の原形の間に副詞が入る分離不定詞です。',
+    parts: [
+      { text: 'The only solution to cope with the problem', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'to completely change', role: 'C' },
+      { text: 'our strategy', role: 'O' },
+    ],
+    options: ['The only solution to cope with the problem', 'is', 'to completely change', 'our strategy']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '現在完了',
+    japanese_text: '気候変動はここ数十年間で深刻な問題となってきた。',
+    english_text: 'Climate change has become a severe issue over the last few decades.',
+    explanation: '過去から現在までの継続した変化を表すため、現在完了形を使います。over the last few decades と相性が良いです。',
+    parts: [
+      { text: 'Climate change', role: 'S' },
+      { text: 'has become', role: 'V' },
+      { text: 'a severe issue', role: 'C' },
+      { text: 'over the last few decades', role: 'M' },
+    ],
+    options: ['has become', 'became', 'becomes', 'is becoming']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '科学',
+    grammar_category: '現在完了',
+    japanese_text: 'その科学者はついに画期的な発見をした。',
+    english_text: 'The scientist has finally made a breakthrough discovery.',
+    explanation: '現在に影響を及ぼす「結果・完了」を表す現在完了形です。',
+    parts: [
+      { text: 'The scientist', role: 'S' },
+      { text: 'has finally made', role: 'V' },
+      { text: 'a breakthrough discovery', role: 'O' },
+    ],
+    options: ['The scientist', 'has finally made', 'a breakthrough discovery']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '彼が富裕であるか貧困であるかは問題ではない。',
+    english_text: 'It doesn\'t matter whether he is rich or poor.',
+    explanation: '「〜であろうとなかろうと」という名詞節を導く接続詞 whether を使います。',
+    parts: [
+      { text: 'It doesn\'t matter', role: 'V' },
+      { text: 'whether', role: 'S' },
+      { text: 'he is rich or poor', role: 'C' },
+    ],
+    options: ['whether', 'if', 'that', 'unless']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '学術',
+    grammar_category: '接続詞',
+    japanese_text: 'ひとたび失われると、時間は決して取り戻すことができない。',
+    english_text: 'Once lost, time can never be recovered.',
+    explanation: '接続詞 Once に続く it is が省略された分詞構文的な表現です。',
+    parts: [
+      { text: 'Once lost', role: 'M' },
+      { text: 'time', role: 'S' },
+      { text: 'can never be recovered', role: 'V' },
+    ],
+    options: ['Once lost', 'time', 'can never be recovered']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '文学',
+    grammar_category: '受動態',
+    japanese_text: '彼はその時代における最も偉大な作家の一人であると言われている。',
+    english_text: 'He is said to be one of the greatest writers of his time.',
+    explanation: '「〜と言われている」は It is said that he is... または He is said to be... となります。',
+    parts: [
+      { text: 'He', role: 'S' },
+      { text: 'is said to be', role: 'V' },
+      { text: 'one of the greatest writers', role: 'C' },
+      { text: 'of his time', role: 'M' },
+    ],
+    options: ['is said to be', 'is said being', 'says to be', 'was said to be']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '受動態',
+    japanese_text: 'その新しい法律は来月までに施行されることが期待されている。',
+    english_text: 'The new law is expected to be enforced by next month.',
+    explanation: '「〜されることが期待される」は be expected to be + 過去分詞 となります。',
+    parts: [
+      { text: 'The new law', role: 'S' },
+      { text: 'is expected', role: 'V' },
+      { text: 'to be enforced', role: 'C' },
+      { text: 'by next month', role: 'M' },
+    ],
+    options: ['The new law', 'is expected', 'to be enforced', 'by next month']
+  }
+
 ];
 
 async function seed() {
