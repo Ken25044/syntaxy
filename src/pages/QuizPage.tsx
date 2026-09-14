@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { fetchQuestions, fetchQuestionsByIds } from '../services/questionService';
@@ -29,9 +29,11 @@ function SimpleQuiz({
   const [shuffledOptions] = useState<string[]>(() => 
     [...question.options].sort(() => Math.random() - 0.5)
   );
+  const hasSubmitted = useRef(false);
 
   const handleSelect = (opt: string) => {
-    if (selected) return;
+    if (hasSubmitted.current) return;
+    hasSubmitted.current = true;
     setSelected(opt);
     setTimeout(() => onAnswer(opt, opt === correct), 1000);
   };
@@ -102,6 +104,7 @@ function SortQuiz({
   const [arranged, setArranged] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  const hasSubmitted = useRef(false);
 
   const moveToArranged = (word: string, idx: number) => {
     if (submitted) return;
@@ -116,7 +119,9 @@ function SortQuiz({
   };
 
   const handleSubmit = () => {
+    if (hasSubmitted.current) return;
     if (arranged.length !== correctOrder.length) return;
+    hasSubmitted.current = true;
     const correct = JSON.stringify(arranged) === JSON.stringify(correctOrder);
     setIsCorrect(correct);
     setSubmitted(true);
