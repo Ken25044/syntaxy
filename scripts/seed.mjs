@@ -1705,6 +1705,1727 @@ const questions = [
     options: ['The new law', 'is expected', 'to be enforced', 'by next month']
   }
 
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用1) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用1) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用1) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用1) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用1) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用2) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用2) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用2) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用2) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用2) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用3) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用3) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用3) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用3) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用3) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用4) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用4) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用4) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用4) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用4) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用5) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用5) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用5) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用5) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用5) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用6) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用6) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用6) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用6) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用6) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用7) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用7) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用7) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用7) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用7) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用8) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用8) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用8) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用8) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用8) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用9) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用9) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用9) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用9) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用9) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用10) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用10) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用10) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用10) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用10) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用11) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用11) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用11) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用11) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用11) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用12) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用12) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用12) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用12) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用12) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用13) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用13) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用13) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用13) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用13) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用14) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用14) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用14) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用14) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用14) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用15) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用15) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用15) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用15) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用15) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用16) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用16) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用16) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用16) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用16) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用17) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用17) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用17) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用17) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用17) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用18) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用18) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用18) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用18) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用18) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用19) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用19) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用19) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用19) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用19) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '助動詞',
+    japanese_text: '(応用20) 彼が到着するやいなや、雨が降り始めた。',
+    english_text: 'Hardly had he arrived when it began to rain.',
+    explanation: 'Hardly などの否定語が文頭に来ると、うしろは疑問文の語順（倒置）になります。',
+    parts: [
+      { text: 'Hardly had he arrived', role: 'M' },
+      { text: 'when', role: 'M' },
+      { text: 'it', role: 'S' },
+      { text: 'began', role: 'V' },
+      { text: 'to rain', role: 'O' },
+    ],
+    options: ['had he arrived', 'he had arrived', 'did he arrive', 'he arrived']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '接続詞',
+    japanese_text: '(応用20) 彼は英語を話すだけでなく、フランス語も流暢に話す。',
+    english_text: 'Not only does he speak English, but he also speaks French fluently.',
+    explanation: 'Not only が文頭に来ると倒置が起きます。',
+    parts: [
+      { text: 'Not only', role: 'M' },
+      { text: 'does he speak', role: 'V' },
+      { text: 'English', role: 'O' },
+      { text: 'but he also speaks French fluently', role: 'M' },
+    ],
+    options: ['Not only', 'does he speak', 'English', 'but he also speaks French fluently']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '人物',
+    grammar_category: '接続詞',
+    japanese_text: '(応用20) 彼は若いけれども、とても賢い。',
+    english_text: 'Young as he is, he is very wise.',
+    explanation: '「形容詞 + as + S + V」の形で「〜であるけれども」という譲歩を表します。',
+    parts: [
+      { text: 'Young as he is', role: 'M' },
+      { text: 'he', role: 'S' },
+      { text: 'is', role: 'V' },
+      { text: 'very wise', role: 'C' },
+    ],
+    options: ['as', 'though', 'if', 'when']
+  }
+  ,
+  {
+    mode: 'personalized',
+    difficulty: 5,
+    theme: '日常',
+    grammar_category: '仮定法',
+    japanese_text: '(応用20) もう寝る時間ですよ。',
+    english_text: 'It is high time you went to bed.',
+    explanation: 'It is high time に続く節では、過去形（仮定法過去）を用いて「とっくに〜する時間だ」という意味を表します。',
+    parts: [
+      { text: 'It is high time', role: 'M' },
+      { text: 'you', role: 'S' },
+      { text: 'went', role: 'V' },
+      { text: 'to bed', role: 'M' },
+    ],
+    options: ['It is high time', 'you', 'went', 'to bed']
+  }
+  ,
+  {
+    mode: 'simple',
+    difficulty: 5,
+    theme: '社会',
+    grammar_category: '分詞',
+    japanese_text: '(応用20) 一般的に言って、女性の方が男性よりも長生きする。',
+    english_text: 'Generally speaking, women live longer than men.',
+    explanation: 'Generally speaking は「一般的に言って」という意味の独立分詞構文（慣用表現）です。',
+    parts: [
+      { text: 'Generally speaking', role: 'M' },
+      { text: 'women', role: 'S' },
+      { text: 'live', role: 'V' },
+      { text: 'longer than men', role: 'M' },
+    ],
+    options: ['speaking', 'spoken', 'to speak', 'speak']
+  }
+
 ];
 
 async function seed() {
