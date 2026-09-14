@@ -25,7 +25,10 @@ function SimpleQuiz({
   onAnswer: (answer: string, isCorrect: boolean) => void;
 }) {
   const [selected, setSelected] = useState<string | null>(null);
-  const correct = question.parts.find((p) => p.role === 'V')?.text ?? question.options[0];
+  const correct = question.options[0];
+  const [shuffledOptions] = useState<string[]>(() => 
+    [...question.options].sort(() => Math.random() - 0.5)
+  );
 
   const handleSelect = (opt: string) => {
     if (selected) return;
@@ -51,7 +54,7 @@ function SimpleQuiz({
 
       {/* 4択 */}
       <div className="grid grid-cols-2 gap-3">
-        {question.options.map((opt) => {
+        {shuffledOptions.map((opt) => {
           const isSelected = selected === opt;
           const isCorrectOpt = opt === correct;
           let cls = 'border-gray-100 bg-white text-gray-700 hover:border-primary-200 hover:bg-primary-50';
