@@ -3,7 +3,6 @@ import {
   addDoc,
   query,
   where,
-  orderBy,
   getDocs,
   serverTimestamp,
   Timestamp,
@@ -25,13 +24,20 @@ export async function saveStudyLog(
 
 /** ユーザーの全学習ログを取得（最新100件） */
 export async function fetchStudyLogs(uid: string): Promise<StudyLog[]> {
+  // 複合インデックスエラーを避けるため、orderByを外してクライアントでソートする
   const q = query(
     collection(db, LOGS_COL),
-    where('uid', '==', uid),
-    orderBy('answered_at', 'desc'),
+    where('uid', '==', uid)
   );
   const snap = await getDocs(q);
-  return snap.docs.map((d) => ({ id: d.id, ...d.data() } as StudyLog));
+  const logs = snap.docs.map((d) => ({ id: d.id, ...d.data() } as StudyLog));
+  // クライアント側で降順ソート
+  logs.sort((a, b) => {
+    const tA = a.answered_at instanceof Timestamp ? a.answered_at.toMillis() : (a.answered_at ? new Date(a.answered_at as unknown as string).getTime() : 0);
+    const tB = b.answered_at instanceof Timestamp ? b.answered_at.toMillis() : (b.answered_at ? new Date(b.answered_at as unknown as string).getTime() : 0);
+    return tB - tA;
+  });
+  return logs;
 }
 
 /** カテゴリ別の正答率を集計 */
