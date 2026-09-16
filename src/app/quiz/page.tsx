@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { fetchQuestions, fetchQuestionsByIds } from '@/services/questionService';
@@ -264,7 +264,7 @@ function ResultOverlay({
 }
 
 // ── メインのQuizPage ──────────────────────────────────
-export default function QuizPage() {
+function QuizPageInner() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const { user, profile } = useAuth();
@@ -442,5 +442,19 @@ export default function QuizPage() {
         />
       )}
     </div>
+  );
+}
+
+export default function QuizPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-[60vh] flex flex-col justify-center space-y-6">
+        <Skeleton className="h-4 w-1/4" />
+        <Skeleton className="h-24 w-full" />
+        <Skeleton className="h-24 w-full" />
+      </div>
+    }>
+      <QuizPageInner />
+    </Suspense>
   );
 }

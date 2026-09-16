@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 function ScoreRing({ score, total }: { score: number; total: number }) {
   const pct = total > 0 ? score / total : 0;
@@ -30,7 +31,7 @@ function ScoreRing({ score, total }: { score: number; total: number }) {
   );
 }
 
-export default function QuizResultPage() {
+function QuizResultPageInner() {
   const searchParams = useSearchParams();
   const score = Number(searchParams.get('score') ?? 0);
   const total = Number(searchParams.get('total') ?? 5);
@@ -76,5 +77,18 @@ export default function QuizResultPage() {
         </Link>
       </div>
     </div>
+  );
+}
+
+export default function QuizResultPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-[80vh] flex flex-col items-center justify-center space-y-8 text-center">
+        <div className="w-32 h-32 rounded-full bg-gray-200 animate-pulse"></div>
+        <div className="h-10 w-24 bg-gray-200 animate-pulse rounded"></div>
+      </div>
+    }>
+      <QuizResultPageInner />
+    </Suspense>
   );
 }
