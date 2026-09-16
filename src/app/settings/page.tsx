@@ -1,15 +1,17 @@
+"use client";
+
 import { signOut } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
-import { auth } from '../lib/firebase';
-import { useAuth } from '../contexts/AuthContext';
+import { useRouter } from 'next/navigation';
+import { auth } from '@/lib/firebase';
+import { useAuth } from '@/contexts/AuthContext';
 
 export default function SettingsPage() {
   const { user } = useAuth();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleSignOut = async () => {
     await signOut(auth);
-    navigate('/');
+    router.push('/');
   };
 
   return (

@@ -1,12 +1,15 @@
+"use client";
+
 import { useState } from 'react';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { useNavigate, Link } from 'react-router-dom';
-import { auth } from '../lib/firebase';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { auth } from '@/lib/firebase';
 
 export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleGoogleLogin = async () => {
     setLoading(true);
@@ -14,7 +17,7 @@ export default function LoginPage() {
     try {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
-      navigate('/');
+      router.push('/');
     } catch (e) {
       setError('ログインに失敗しました。もう一度お試しください。');
       console.error(e);
@@ -26,7 +29,7 @@ export default function LoginPage() {
   return (
     <div className="relative min-h-[80vh] flex flex-col items-center justify-center space-y-8 px-4">
       {/* どこからでもホームに戻れるロゴ（左上） */}
-      <Link to="/" className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2">
+      <Link href="/" className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2">
         <span className="text-xl font-bold text-primary-600 tracking-tight">Syntaxy</span>
       </Link>
       {/* ロゴ */}

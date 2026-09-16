@@ -1,10 +1,13 @@
+"use client";
+
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { fetchQuestions, fetchQuestionsByIds } from '../services/questionService';
-import { saveStudyLog } from '../services/studyLogService';
-import { updateStreak, updateWeakQuestion } from '../services/userService';
-import type { Question, SvocRole } from '../types';
+import { useSearchParams, useRouter } from 'next/navigation';
+import { useAuth } from '@/contexts/AuthContext';
+import { fetchQuestions, fetchQuestionsByIds } from '@/services/questionService';
+import { saveStudyLog } from '@/services/studyLogService';
+import { updateStreak, updateWeakQuestion } from '@/services/userService';
+import type { Question, SvocRole } from '@/types';
+import { Skeleton } from '@/components/ui/Skeleton';
 
 
 // SVOC カラーマップ
@@ -262,8 +265,8 @@ function ResultOverlay({
 
 // ── メインのQuizPage ──────────────────────────────────
 export default function QuizPage() {
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const { user, profile } = useAuth();
 
   const mode = (searchParams.get('mode') ?? 'simple') as 'simple' | 'personalized' | 'review';
@@ -351,20 +354,30 @@ export default function QuizPage() {
   const handleNext = useCallback(() => {
     setLastResult(null);
     if (currentIdx + 1 >= questions.length) {
-      navigate(`/quiz/result?score=${score + (lastResult?.isCorrect ? 1 : 0)}&total=${questions.length}`);
+      router.push(`/quiz/result?score=${score + (lastResult?.isCorrect ? 1 : 0)}&total=${questions.length}`);
     } else {
       setCurrentIdx((i) => i + 1);
       setQuizKey((k) => k + 1);
     }
-  }, [currentIdx, questions.length, navigate, score, lastResult]);
+  }, [currentIdx, questions.length, router, score, lastResult]);
 
   const q = questions[currentIdx];
 
   if (loading) {
     return (
-      <div className="min-h-[60vh] flex flex-col items-center justify-center gap-4">
-        <div className="w-10 h-10 rounded-full border-4 border-primary-200 border-t-primary-600 animate-spin" />
-        <p className="text-gray-400 text-sm">問題を読み込み中…</p>
+      <div className="min-h-[60vh] flex flex-col justify-center space-y-6">
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-1/4" />
+          <Skeleton className="h-2 w-full" />
+        </div>
+        <Skeleton className="h-24 w-full" />
+        <Skeleton className="h-24 w-full" />
+        <div className="grid grid-cols-2 gap-3">
+          <Skeleton className="h-14 w-full" />
+          <Skeleton className="h-14 w-full" />
+          <Skeleton className="h-14 w-full" />
+          <Skeleton className="h-14 w-full" />
+        </div>
       </div>
     );
   }
@@ -374,7 +387,10 @@ export default function QuizPage() {
       <div className="min-h-[60vh] flex flex-col items-center justify-center gap-4 text-center">
         <span className="text-5xl">😥</span>
         <p className="text-gray-600 font-medium">{error}</p>
-        <button onClick={() => navigate('/')} className="text-primary-600 text-sm underline">ホームへ戻る</button>
+        <div className="flex gap-3 mt-2">
+          <button onClick={() => window.location.reload()} className="px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">リトライ</button>
+          <button onClick={() => router.push('/')} className="px-4 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm font-medium">ホームへ</button>
+        </div>
       </div>
     );
   }

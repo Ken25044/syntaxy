@@ -1,8 +1,11 @@
-import { NavLink, useLocation } from 'react-router-dom';
+"use client";
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navItems = [
   {
-    to: '/',
+    href: '/',
     label: 'ホーム',
     icon: (active: boolean) => (
       <svg className="w-6 h-6" fill={active ? 'currentColor' : 'none'} viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 0 : 1.8}>
@@ -11,7 +14,7 @@ const navItems = [
     ),
   },
   {
-    to: '/quiz',
+    href: '/quiz',
     label: 'クイズ',
     icon: (active: boolean) => (
       <svg className="w-6 h-6" fill={active ? 'currentColor' : 'none'} viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 0 : 1.8}>
@@ -20,7 +23,7 @@ const navItems = [
     ),
   },
   {
-    to: '/progress',
+    href: '/progress',
     label: '進捗',
     icon: (active: boolean) => (
       <svg className="w-6 h-6" fill={active ? 'currentColor' : 'none'} viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 0 : 1.8}>
@@ -29,7 +32,7 @@ const navItems = [
     ),
   },
   {
-    to: '/settings',
+    href: '/settings',
     label: '設定',
     icon: (active: boolean) => (
       <svg className="w-6 h-6" fill={active ? 'currentColor' : 'none'} viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 0 : 1.8}>
@@ -41,31 +44,32 @@ const navItems = [
 ];
 
 export default function BottomNav() {
-  const location = useLocation();
+  const pathname = usePathname();
 
   // クイズ中はボトムナビを非表示
-  if (location.pathname.startsWith('/quiz')) return null;
+  if (pathname.startsWith('/quiz')) return null;
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-t border-gray-100 safe-area-pb">
       <div className="max-w-2xl mx-auto px-2 flex items-stretch">
-        {navItems.map(({ to, label, icon }) => {
-          const isActive = to === '/'
-            ? location.pathname === '/'
-            : location.pathname.startsWith(to);
+        {navItems.map(({ href, label, icon }) => {
+          const isActive = href === '/'
+            ? pathname === '/'
+            : pathname.startsWith(href);
           return (
-            <NavLink
-              key={to}
-              to={to}
+            <Link
+              key={href}
+              href={href}
+              aria-label={label}
               className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2 transition-colors"
             >
-              <span className={isActive ? 'text-primary-600' : 'text-gray-400'}>
+              <span aria-hidden="true" className={isActive ? 'text-primary-600' : 'text-gray-400'}>
                 {icon(isActive)}
               </span>
               <span className={`text-[10px] font-medium ${isActive ? 'text-primary-600' : 'text-gray-400'}`}>
                 {label}
               </span>
-            </NavLink>
+            </Link>
           );
         })}
       </div>

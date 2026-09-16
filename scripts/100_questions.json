@@ -1,0 +1,378 @@
+[
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "学術",
+    "grammar_category": "現在完了",
+    "japanese_text": "その理論は過去10年間で広く受け入れられるようになった。",
+    "english_text": "The theory has become widely accepted over the past decade.",
+    "explanation": "過去から現在までの継続した変化を表すため、現在完了形を使用します。",
+    "parts": [
+      { "text": "The theory", "role": "S" },
+      { "text": "has become", "role": "V" },
+      { "text": "widely accepted", "role": "C" },
+      { "text": "over the past decade", "role": "M" }
+    ],
+    "options": ["has become", "became", "had become", "becomes"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "社会",
+    "grammar_category": "現在完了",
+    "japanese_text": "彼らがそのプロジェクトを開始してから3年が経つ。",
+    "english_text": "It has been three years since they started the project.",
+    "explanation": "It has been + 期間 + since + 過去形 で「〜してから〜経つ」を表します。",
+    "parts": [
+      { "text": "It", "role": "S" },
+      { "text": "has been", "role": "V" },
+      { "text": "three years", "role": "C" },
+      { "text": "since they started the project", "role": "M" }
+    ],
+    "options": ["It", "has been", "three years", "since they started the project"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "ビジネス",
+    "grammar_category": "仮定法",
+    "japanese_text": "もし私があなたの立場なら、その申し出を受け入れるだろう。",
+    "english_text": "Were I in your position, I would accept the offer.",
+    "explanation": "If I were... のIfが省略され、倒置が起きた形（Were I...）です。",
+    "parts": [
+      { "text": "Were I", "role": "M" },
+      { "text": "in your position", "role": "M" },
+      { "text": "I", "role": "S" },
+      { "text": "would accept", "role": "V" },
+      { "text": "the offer", "role": "O" }
+    ],
+    "options": ["Were I", "If I am", "Am I", "Had I been"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "文学",
+    "grammar_category": "仮定法",
+    "japanese_text": "彼がもっと早く出発していれば、電車に間に合っていただろうに。",
+    "english_text": "Had he left earlier, he would have caught the train.",
+    "explanation": "If he had left earlier の If が省略され倒置した形です。仮定法過去完了。",
+    "parts": [
+      { "text": "Had he left earlier", "role": "M" },
+      { "text": "he", "role": "S" },
+      { "text": "would have caught", "role": "V" },
+      { "text": "the train", "role": "O" }
+    ],
+    "options": ["Had he left earlier", "he", "would have caught", "the train"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "科学",
+    "grammar_category": "分詞",
+    "japanese_text": "英語で書かれているので、その本は読みやすい。",
+    "english_text": "Written in English, the book is easy to read.",
+    "explanation": "Because it is written の分詞構文。受動の意味なので過去分詞 Written から始まります。",
+    "parts": [
+      { "text": "Written in English", "role": "M" },
+      { "text": "the book", "role": "S" },
+      { "text": "is", "role": "V" },
+      { "text": "easy to read", "role": "C" }
+    ],
+    "options": ["Written", "Writing", "Wrote", "To write"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "日常",
+    "grammar_category": "分詞",
+    "japanese_text": "天気が良かったので、私たちはハイキングに出かけた。",
+    "english_text": "The weather being fine, we went hiking.",
+    "explanation": "独立分詞構文です。主節の主語(we)と異なる主語(The weather)が残っています。",
+    "parts": [
+      { "text": "The weather being fine", "role": "M" },
+      { "text": "we", "role": "S" },
+      { "text": "went", "role": "V" },
+      { "text": "hiking", "role": "M" }
+    ],
+    "options": ["The weather being fine", "we", "went", "hiking"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "社会",
+    "grammar_category": "関係代名詞",
+    "japanese_text": "彼が言ったことは全くの嘘だった。",
+    "english_text": "What he said was a complete lie.",
+    "explanation": "先行詞を含む関係代名詞 what（〜すること・もの）は名詞節を作ります。",
+    "parts": [
+      { "text": "What he said", "role": "S" },
+      { "text": "was", "role": "V" },
+      { "text": "a complete lie", "role": "C" }
+    ],
+    "options": ["What", "That", "Which", "As"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "ビジネス",
+    "grammar_category": "関係代名詞",
+    "japanese_text": "我々が対処しなければならない問題は予算不足だ。",
+    "english_text": "The problem with which we must deal is the lack of budget.",
+    "explanation": "deal with the problem の with が関係代名詞の前に移動した形です。",
+    "parts": [
+      { "text": "The problem", "role": "S" },
+      { "text": "with which", "role": "M" },
+      { "text": "we must deal", "role": "M" },
+      { "text": "is", "role": "V" },
+      { "text": "the lack of budget", "role": "C" }
+    ],
+    "options": ["The problem", "with which", "we must deal", "is", "the lack of budget"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "論理",
+    "grammar_category": "助動詞",
+    "japanese_text": "あなたはそんなに急ぐ必要はなかったのに。",
+    "english_text": "You need not have hurried so much.",
+    "explanation": "need not have + 過去分詞 で「〜する必要はなかったのに（実際にはした）」を表します。",
+    "parts": [
+      { "text": "You", "role": "S" },
+      { "text": "need not have hurried", "role": "V" },
+      { "text": "so much", "role": "M" }
+    ],
+    "options": ["need not have hurried", "cannot have hurried", "must not have hurried", "should not hurry"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "日常",
+    "grammar_category": "助動詞",
+    "japanese_text": "彼はそのニュースを聞いて驚いたに違いない。",
+    "english_text": "He must have been surprised to hear the news.",
+    "explanation": "must have + 過去分詞 で「〜だったに違いない」を表します。",
+    "parts": [
+      { "text": "He", "role": "S" },
+      { "text": "must have been", "role": "V" },
+      { "text": "surprised", "role": "C" },
+      { "text": "to hear the news", "role": "M" }
+    ],
+    "options": ["He", "must have been", "surprised", "to hear the news"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "学術",
+    "grammar_category": "動名詞",
+    "japanese_text": "私がこの窓を開けてもよろしいでしょうか。",
+    "english_text": "Would you mind my opening this window?",
+    "explanation": "mind -ing（〜するのを嫌がる）の動名詞の意味上の主語として所有格(my)を使います。",
+    "parts": [
+      { "text": "Would you mind", "role": "V" },
+      { "text": "my opening", "role": "O" },
+      { "text": "this window", "role": "O" }
+    ],
+    "options": ["my opening", "me to open", "I open", "mine opening"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "社会",
+    "grammar_category": "動名詞",
+    "japanese_text": "彼はその賞を受賞したことを誇りに思っている。",
+    "english_text": "He is proud of having won the prize.",
+    "explanation": "述語動詞(is)よりも過去のこと(受賞した)を動名詞で表す場合、完了動名詞（having + 過去分詞）を使います。",
+    "parts": [
+      { "text": "He", "role": "S" },
+      { "text": "is", "role": "V" },
+      { "text": "proud", "role": "C" },
+      { "text": "of having won the prize", "role": "M" }
+    ],
+    "options": ["He", "is", "proud", "of having won the prize"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "科学",
+    "grammar_category": "比較",
+    "japanese_text": "光は音よりもずっと速く伝わる。",
+    "english_text": "Light travels much faster than sound.",
+    "explanation": "比較級を強調する副詞 much を使います。",
+    "parts": [
+      { "text": "Light", "role": "S" },
+      { "text": "travels", "role": "V" },
+      { "text": "much faster", "role": "M" },
+      { "text": "than sound", "role": "M" }
+    ],
+    "options": ["much", "very", "so", "as"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "ビジネス",
+    "grammar_category": "比較",
+    "japanese_text": "この機械は以前のものより3倍効率的だ。",
+    "english_text": "This machine is three times as efficient as the previous one.",
+    "explanation": "倍数表現は「倍数 + as + 原級 + as」で表します。",
+    "parts": [
+      { "text": "This machine", "role": "S" },
+      { "text": "is", "role": "V" },
+      { "text": "three times as efficient", "role": "C" },
+      { "text": "as the previous one", "role": "M" }
+    ],
+    "options": ["This machine", "is", "three times as efficient", "as the previous one"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "学術",
+    "grammar_category": "不定詞",
+    "japanese_text": "彼はその真実を知らないふりをした。",
+    "english_text": "He pretended not to know the truth.",
+    "explanation": "不定詞の否定形は to の直前に not を置きます。",
+    "parts": [
+      { "text": "He", "role": "S" },
+      { "text": "pretended", "role": "V" },
+      { "text": "not to know", "role": "O" },
+      { "text": "the truth", "role": "O" }
+    ],
+    "options": ["not to know", "to not know", "to know not", "did not know"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "文学",
+    "grammar_category": "不定詞",
+    "japanese_text": "その本は難しすぎて私には読めない。",
+    "english_text": "The book is too difficult for me to read.",
+    "explanation": "too... to〜構文。不定詞の意味上の主語は for me で表します。",
+    "parts": [
+      { "text": "The book", "role": "S" },
+      { "text": "is", "role": "V" },
+      { "text": "too difficult", "role": "C" },
+      { "text": "for me to read", "role": "M" }
+    ],
+    "options": ["The book", "is", "too difficult", "for me to read"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "社会",
+    "grammar_category": "受動態",
+    "japanese_text": "その問題は現在議論されているところだ。",
+    "english_text": "The matter is being discussed right now.",
+    "explanation": "現在進行形の受動態は is being + 過去分詞 で表します。",
+    "parts": [
+      { "text": "The matter", "role": "S" },
+      { "text": "is being discussed", "role": "V" },
+      { "text": "right now", "role": "M" }
+    ],
+    "options": ["is being discussed", "is discussing", "has been discussed", "discusses"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "科学",
+    "grammar_category": "受動態",
+    "japanese_text": "その星は肉眼で見ることができる。",
+    "english_text": "The star can be seen with the naked eye.",
+    "explanation": "助動詞を含む受動態は 助動詞 + be + 過去分詞 となります。",
+    "parts": [
+      { "text": "The star", "role": "S" },
+      { "text": "can be seen", "role": "V" },
+      { "text": "with the naked eye", "role": "M" }
+    ],
+    "options": ["The star", "can be seen", "with the naked eye"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "日常",
+    "grammar_category": "前置詞",
+    "japanese_text": "私は彼がその計画に反対していることに気づかなかった。",
+    "english_text": "I was not aware of his being opposed to the plan.",
+    "explanation": "be aware of の目的語として動名詞(being)を使い、その意味上の主語(his)を置きます。",
+    "parts": [
+      { "text": "I", "role": "S" },
+      { "text": "was", "role": "V" },
+      { "text": "not aware", "role": "C" },
+      { "text": "of his being opposed to the plan", "role": "M" }
+    ],
+    "options": ["of", "about", "for", "in"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "社会",
+    "grammar_category": "前置詞",
+    "japanese_text": "天候に関わらず、試合は行われます。",
+    "english_text": "Regardless of the weather, the game will be held.",
+    "explanation": "Regardless of は「〜に関わらず」という群前置詞です。",
+    "parts": [
+      { "text": "Regardless of the weather", "role": "M" },
+      { "text": "the game", "role": "S" },
+      { "text": "will be held", "role": "V" }
+    ],
+    "options": ["Regardless of the weather", "the game", "will be held"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "論理",
+    "grammar_category": "接続詞",
+    "japanese_text": "彼が来るかどうかは確実ではない。",
+    "english_text": "It is not certain whether he will come or not.",
+    "explanation": "名詞節を導く whether（〜かどうか）。",
+    "parts": [
+      { "text": "It is not certain", "role": "V" },
+      { "text": "whether he will come or not", "role": "S" }
+    ],
+    "options": ["whether", "that", "unless", "since"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "日常",
+    "grammar_category": "接続詞",
+    "japanese_text": "暗くならないうちに家に帰りましょう。",
+    "english_text": "Let's go home before it gets dark.",
+    "explanation": "before を用いて「〜しないうちに」という意味を表すことができます。",
+    "parts": [
+      { "text": "Let's go", "role": "V" },
+      { "text": "home", "role": "M" },
+      { "text": "before it gets dark", "role": "M" }
+    ],
+    "options": ["Let's go", "home", "before it gets dark"]
+  },
+  {
+    "mode": "simple",
+    "difficulty": 5,
+    "theme": "人物",
+    "grammar_category": "代名詞",
+    "japanese_text": "彼は私が話をした人です。",
+    "english_text": "He is the man to whom I spoke.",
+    "explanation": "前置詞(to)＋関係代名詞(whom)の形です。I spoke to the man. から成り立ちます。",
+    "parts": [
+      { "text": "He", "role": "S" },
+      { "text": "is", "role": "V" },
+      { "text": "the man", "role": "C" },
+      { "text": "to whom I spoke", "role": "M" }
+    ],
+    "options": ["to whom", "who", "whom", "that"]
+  },
+  {
+    "mode": "personalized",
+    "difficulty": 5,
+    "theme": "社会",
+    "grammar_category": "代名詞",
+    "japanese_text": "参加者のほとんどは学生でした。",
+    "english_text": "Most of those who participated were students.",
+    "explanation": "those who... で「〜する人々」を表します。",
+    "parts": [
+      { "text": "Most of those who participated", "role": "S" },
+      { "text": "were", "role": "V" },
+      { "text": "students", "role": "C" }
+    ],
+    "options": ["Most of those", "who participated", "were", "students"]
+  }
+]

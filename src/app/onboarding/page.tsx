@@ -1,7 +1,9 @@
+"use client";
+
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { updateUserProfile } from '../services/userService';
+import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
+import { updateUserProfile } from '@/services/userService';
 
 const PURPOSES = [
   { id: 'exam', label: '試験対策（TOEIC, 英検など）', emoji: '📝' },
@@ -32,9 +34,6 @@ export default function OnboardingPage() {
     setLoading(true);
     try {
       await updateUserProfile(user.uid, { purpose, interests });
-      // update local profile in auth context might take a moment or need page reload,
-      // but usually the next navigation or listener will catch it.
-      // We can force reload or just navigate and let the listener update it.
       window.location.href = '/'; 
     } catch (e) {
       console.error(e);
@@ -43,14 +42,13 @@ export default function OnboardingPage() {
   };
 
   if (!user || (profile && profile.purpose)) {
-    // 既に設定済みか未ログインならホームへ
-    return null; // リダイレクトはAppレイアウトなどで処理
+    return null;
   }
 
   return (
     <div className="relative min-h-screen bg-white px-5 py-12 flex flex-col max-w-md mx-auto">
       {/* どこからでもホームに戻れるロゴ（左上） */}
-      <Link to="/" className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2">
+      <Link href="/" className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2">
         <span className="text-xl font-bold text-primary-600 tracking-tight">Syntaxy</span>
       </Link>
 

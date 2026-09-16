@@ -1,4 +1,7 @@
-import { useSearchParams, Link } from 'react-router-dom';
+"use client";
+
+import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 function ScoreRing({ score, total }: { score: number; total: number }) {
   const pct = total > 0 ? score / total : 0;
@@ -28,7 +31,7 @@ function ScoreRing({ score, total }: { score: number; total: number }) {
 }
 
 export default function QuizResultPage() {
-  const [searchParams] = useSearchParams();
+  const searchParams = useSearchParams();
   const score = Number(searchParams.get('score') ?? 0);
   const total = Number(searchParams.get('total') ?? 5);
   const pct = total > 0 ? Math.round((score / total) * 100) : 0;
@@ -54,20 +57,20 @@ export default function QuizResultPage() {
 
       <div className="flex flex-col gap-3 w-full max-w-xs">
         <Link
-          to="/quiz?mode=simple"
-          className="w-full py-3.5 rounded-2xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors"
+          href="/quiz?mode=simple"
+          className="w-full py-3.5 rounded-2xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors text-center"
         >
           もう一度やる
         </Link>
         <Link
-          to="/progress"
-          className="w-full py-3.5 rounded-2xl border border-gray-200 bg-white text-gray-700 font-semibold hover:bg-gray-50 transition-colors"
+          href="/progress"
+          className="w-full py-3.5 rounded-2xl border border-gray-200 bg-white text-gray-700 font-semibold hover:bg-gray-50 transition-colors text-center"
         >
           進捗を確認する
         </Link>
         <Link
-          to="/"
-          className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+          href="/"
+          className="text-sm text-gray-400 hover:text-gray-600 transition-colors text-center"
         >
           ホームへ戻る
         </Link>

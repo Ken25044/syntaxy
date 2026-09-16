@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { useUserProfile } from '../hooks/useUserProfile';
-import { useStudyStats } from '../hooks/useStudyStats';
+"use client";
+
+import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
+import { useUserProfile } from '@/hooks/useUserProfile';
+import { useStudyStats } from '@/hooks/useStudyStats';
 
 function FlameIcon({ className }: { className?: string }) {
   return (
@@ -13,7 +15,7 @@ function FlameIcon({ className }: { className?: string }) {
 
 const quickModes = [
   {
-    to: '/quiz?mode=simple',
+    href: '/quiz?mode=simple',
     emoji: '⚡',
     title: 'シンプルモード',
     desc: '4択で英文法をチェック',
@@ -21,7 +23,7 @@ const quickModes = [
     border: 'border-blue-100',
   },
   {
-    to: '/quiz?mode=personalized',
+    href: '/quiz?mode=personalized',
     emoji: '🧩',
     title: '並べ替えモード',
     desc: 'SVOCを正しく並べよう',
@@ -81,8 +83,8 @@ export default function HomePage() {
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {quickModes.map((mode) => (
             <Link
-              key={mode.to}
-              to={mode.to}
+              key={mode.href}
+              href={mode.href}
               className={`flex items-center gap-4 p-4 rounded-2xl border ${mode.bg} ${mode.border} hover:shadow-md transition-all active:scale-95`}
             >
               <span className="text-3xl">{mode.emoji}</span>
@@ -106,7 +108,7 @@ export default function HomePage() {
           </div>
           {profile?.weak_questions && profile.weak_questions.length > 0 ? (
             <Link
-              to="/quiz?mode=review"
+              href="/quiz?mode=review"
               className="flex items-center gap-4 p-4 rounded-2xl bg-orange-50 border border-orange-100 hover:shadow-md transition-all active:scale-95"
             >
               <span className="text-3xl">🔥</span>
@@ -137,7 +139,7 @@ export default function HomePage() {
           {grammarCategories.map((cat) => (
             <Link
               key={cat}
-              to={`/quiz?category=${encodeURIComponent(cat)}`}
+              href={`/quiz?category=${encodeURIComponent(cat)}`}
               className="px-4 py-3 rounded-xl bg-white border border-gray-100 text-sm font-medium text-gray-700 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700 transition-all text-center"
             >
               {cat}
@@ -152,7 +154,7 @@ export default function HomePage() {
           <p className="font-semibold text-lg">ログインして進捗を保存しよう</p>
           <p className="text-sm text-primary-200 mt-1 mb-4">Googleアカウントで簡単に始められます</p>
           <Link
-            to="/login"
+            href="/login"
             className="inline-block bg-white text-primary-600 font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-primary-50 transition-colors"
           >
             Googleでログイン

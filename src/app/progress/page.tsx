@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { useStudyStats } from '../hooks/useStudyStats';
-import { useUserProfile } from '../hooks/useUserProfile';
+"use client";
+
+import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
+import { useStudyStats } from '@/hooks/useStudyStats';
+import { useUserProfile } from '@/hooks/useUserProfile';
 
 // シンプルな棒グラフコンポーネント
 function BarChart({ data }: { data: { date: string; correct: number; total: number }[] }) {
@@ -40,7 +42,7 @@ export default function ProgressPage() {
         <span className="text-5xl">📊</span>
         <h1 className="text-xl font-bold text-gray-800">進捗を確認するには<br />ログインが必要です</h1>
         <Link
-          to="/login"
+          href="/login"
           className="inline-block bg-primary-600 text-white font-semibold text-sm px-6 py-3 rounded-full hover:bg-primary-700 transition-colors"
         >
           Googleでログイン
