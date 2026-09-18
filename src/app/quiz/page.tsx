@@ -244,7 +244,7 @@ function ResultOverlay({
           <div>
             <p className="text-white font-bold text-lg">{isCorrect ? '正解！' : '不正解...'}</p>
             <p className="text-white/90 text-sm">{isCorrect ? 'すばらしい！' : 'もう一度チャレンジしよう'}</p>
-            {!isCorrect && explanation && (
+            {explanation && (
               <div className="mt-2 bg-white/20 rounded-xl p-3 text-sm text-white border border-white/30">
                 <p className="font-semibold mb-1">💡 解説</p>
                 <p>{explanation}</p>
