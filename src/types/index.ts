@@ -49,3 +49,31 @@ export interface AnswerResult {
   userAnswer: string[];
   isCorrect: boolean;
 }
+
+// ── TOEFL対策モード用 ──────────────────────────────────
+
+// TOEFL問題パーツ（チャンク）
+export interface ToeflQuestionPart {
+  id: string;
+  text: string;
+  role: SvocRole;
+  is_dummy?: boolean;   // reorder用: ダミー選択肢
+  is_target?: boolean;  // typing用: 入力対象
+}
+
+// TOEFL問題ドキュメント（Firestore: toefl_questions コレクション）
+export interface ToeflQuestion {
+  id: string;
+  question_type: 'reorder' | 'typing';
+  japanese_text: string;
+  english_text: string;
+  target_word?: string;   // typing用: 正解単語
+  parts: ToeflQuestionPart[];
+}
+
+// TOEFL学習結果（画面間の状態受け渡し用）
+export interface ToeflAnswerResult {
+  question: ToeflQuestion;
+  isCorrect: boolean;
+  userAnswer: string[] | string;
+}

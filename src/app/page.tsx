@@ -18,6 +18,22 @@ const quickModes = [
     bg: 'bg-violet-50',
     border: 'border-violet-100',
   },
+  {
+    href: '/toefl/reorder',
+    emoji: '🧱',
+    title: 'チャンク整序',
+    desc: 'TOEFL学術文のSVOCを組み立てる',
+    bg: 'bg-emerald-50',
+    border: 'border-emerald-100',
+  },
+  {
+    href: '/toefl/typing',
+    emoji: '✍️',
+    title: 'Complete the Words',
+    desc: 'TOEFL語彙を正確にタイピング',
+    bg: 'bg-amber-50',
+    border: 'border-amber-100',
+  },
 ];
 
 const grammarCategories = [
